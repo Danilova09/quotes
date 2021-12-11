@@ -22,7 +22,6 @@ export class QuotesListComponent implements OnInit {
     this.router.params.subscribe((params: Params) => {
       const category = this.router.snapshot.params['category'];
       if (category === 'all' || this.route.url === '/') {
-        console.log(this.route.url);
         this.http.get<{ [id: string]: Quote }>('https://quotes-7fca7-default-rtdb.firebaseio.com/quotes.json')
           .pipe(map(result => {
             return Object.keys(result).map(id => {
