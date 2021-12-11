@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-4">
+      <ul class="list-group">
+        <li class="list-group-item"
+            routerLink="quotes/all"
+            routerLinkActive="active-link">
+          <a class="list-group-item-link">All</a>
+        </li>
+        <li class="list-group-item"
+            routerLink="quotes/motivational"
+            routerLinkActive="active-link">
+          <a class="list-group-item-link"
+            >Motivational</a>
+        </li>
+        <li class="list-group-item"
+            routerLink="quotes/humor"
+            routerLinkActive="active-link">
+          <a class="list-group-item-link">Humor</a>
+        </li>
+        <li class="list-group-item"
+            routerLink="quotes/saying"
+            routerLinkActive="active-link">
+          <a class="list-group-item-link"
+          >Saying</a>
+        </li>
+        <li class="list-group-item"
+            routerLink="quotes/famous-people"
+            routerLinkActive="active-link">
+          <a class="list-group-item-link"
+          >Famous People</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
