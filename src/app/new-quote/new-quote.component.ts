@@ -6,21 +6,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './new-quote.component.html',
   styleUrls: ['./new-quote.component.css']
 })
-export class NewQuoteComponent implements OnInit {
+export class NewQuoteComponent {
   author = '';
   quoteText = '';
   category = '';
+
   constructor(
     private http: HttpClient,
   ) { }
 
-  ngOnInit(): void {
-  }
-
   onSubmit() {
-   const body = { author: this.author, quoteText: this.quoteText, category: this.category };
-   this.http.post('https://quotes-7fca7-default-rtdb.firebaseio.com/quotes.json', body)
-     .subscribe()
+    const body = {author: this.author, quoteText: this.quoteText, category: this.category};
+    this.http.post('https://quotes-7fca7-default-rtdb.firebaseio.com/quotes.json', body)
+      .subscribe()
   }
 
 }

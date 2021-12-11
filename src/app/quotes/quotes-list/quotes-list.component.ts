@@ -16,8 +16,7 @@ export class QuotesListComponent implements OnInit {
     private http: HttpClient,
     private router: ActivatedRoute,
     private route: Router,
-  ) {
-  }
+  ) { }
 
   ngOnInit(): void {
     this.router.params.subscribe((params: Params) => {
@@ -35,17 +34,16 @@ export class QuotesListComponent implements OnInit {
             this.quotes = quotes;
           })
       } else {
-          this.http.get<{[id: string]: Quote}>(`https://quotes-7fca7-default-rtdb.firebaseio.com/quotes.json?orderBy=%22category%22&equalTo=%22${category}%22`)
-            .pipe(map(result => {
-              return Object.keys(result).map(id => {
-                const quoteDate = result[id];
-                return  new Quote(quoteDate.author, quoteDate.quoteText, quoteDate.category, id);
-              });
-            }))
-            .subscribe(quotes => {
-              this.quotes = quotes;
-              console.log(this.quotes);
-            })
+        this.http.get<{ [id: string]: Quote }>(`https://quotes-7fca7-default-rtdb.firebaseio.com/quotes.json?orderBy=%22category%22&equalTo=%22${category}%22`)
+          .pipe(map(result => {
+            return Object.keys(result).map(id => {
+              const quoteDate = result[id];
+              return new Quote(quoteDate.author, quoteDate.quoteText, quoteDate.category, id);
+            });
+          }))
+          .subscribe(quotes => {
+            this.quotes = quotes;
+          })
       }
     })
   }

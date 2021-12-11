@@ -10,15 +10,19 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { NewQuoteComponent } from './new-quote/new-quote.component';
 import { QuotesListItemComponent } from './quotes/quotes-list/quotes-list-item/quotes-list-item.component';
 import { QuotesListComponent } from './quotes/quotes-list/quotes-list.component';
+import { EditComponent } from './edit/edit.component';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
     NavbarComponent,
     QuotesComponent,
     NewQuoteComponent,
     QuotesListItemComponent,
     QuotesListComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,4 +33,5 @@ import { QuotesListComponent } from './quotes/quotes-list/quotes-list.component'
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
