@@ -1,3 +1,4 @@
-<app-quotes-list-item></app-quotes-list-item>
-<app-quotes-list-item></app-quotes-list-item>
-<app-quotes-list-item></app-quotes-list-item>
+<app-quotes-list-item *ngFor="let quote of quotes"
+[quote]="quote"
+(quotes)="changedQuotes($event)"></app-quotes-list-item>
+

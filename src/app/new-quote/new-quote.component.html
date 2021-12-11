@@ -1,1 +1,24 @@
-<p>new-quote works!</p>
+<div class="form-block" style="display: block; margin: 70px auto; width: 700px;">
+  <h4 class="mb-3">New Quote</h4>
+  <form class="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" name="author" id="author" class="form-control"
+             [(ngModel)]="author" required>
+    </div>
+    <div class="form-group">
+      <label for="quoteText">Quote</label>
+      <input type="text" name="quoteText" id="quoteText" class="form-control"
+             [(ngModel)]="quoteText"  required>
+    </div>
+    <label for="category">Category</label>
+    <select name="category" id="category" class="form-control"
+            [(ngModel)]="category"  required>
+      <option value="motivational">motivational</option>
+      <option value="humor">humor</option>
+      <option value="saying">saying</option>
+      <option value="celebrity">celebrity</option>
+    </select>
+    <button class="btn btn-secondary mt-3" type="submit">save</button>
+  </form>
+</div>
