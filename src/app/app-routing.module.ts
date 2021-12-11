@@ -9,7 +9,7 @@ import { QuotesListComponent } from './quotes/quotes-list/quotes-list.component'
 const routes: Routes = [
   {path: '', component: QuotesComponent, children: [
       {path: '', component: QuotesListComponent},
-      {path: 'quotes/:id', component: QuotesListComponent},
+      {path: 'quotes/:category', component: QuotesListComponent},
     ]},
   {path: 'new-quote', component: NewQuoteComponent},
   {path: '**', component: NotFoundComponent},
