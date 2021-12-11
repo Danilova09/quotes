@@ -1,7 +1,7 @@
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-author">{{ quote.author}}</h5>
-    <p>{{ quote.quoteText }}</p>
+    <h5 class="card-author">— {{ quote.author}}</h5>
+    <p class="quoteText">"{{ quote.quoteText }}"</p>
     <button class="btn btn-secondary" (click)="edit()">edit</button>
     <button class="btn btn-danger ml-3" (click)="delete()">delete</button>
   </div>
